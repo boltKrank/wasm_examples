@@ -43,3 +43,17 @@ git pull
 #### Activate PATH and other environment variables in the current terminal
 
 source ./emsdk_env.sh
+
+## Setting up test web server
+
+Due to security restrictions most browsers won't let you run code off a local file, also if there is any server-side languages being used, they wont be processed when using a local copy.
+
+Best way around this is to host the files on a simple local web server.
+
+nginx and Apache are two popular choices, but might be overkill for this.
+
+Python http.server is a good low-profile solution for this.
+
+For Python 3+ the command is:
+
+`python3 -m http.server`
