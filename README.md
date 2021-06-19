@@ -2,47 +2,21 @@
 
 Various code examples/implementations of WASM for testing and education
 
-## Emscripten
+## What is WebAssembly (WASM)
 
-This tool converts LLVM (see <https://llvm.org/>) to JavaScript. Takes the bytecode generated from C++ and compiles that into Javascript which can then be run via a browser.
+WASM is made up of 2 parts: the "Glue" and the "Module"
 
-Emscripten can convert any language that uses LLVM into WebAssembly. Other languages include (although not as complete as C++):
+### The module
 
-- Ruby
-- Python
-- Haskell
-- Rust
-- D
-- PHP
-- Lua
+Usually outputted as a .wasm file, this is the compiled binary of the imput language. Sicne it is pre-compiled, the performace is close to native (minus browser overheads).
 
-## Emscripten download instructions
+### The glue
 
-*NOTE: Python 3.6+ is required.*
+This is a massive JavaScript file that translates the tradition Javascript requests from the browser into API calls for the module. Currently it can only communicate via API and not directly (i.e. C++ DOM)
 
-<https://emscripten.org/docs/getting_started/downloads.html>
+### Creating the module and glue
 
-## Usage examples
-
-- [C++ Hello World!](cpp_hello_world/cpp_hello_world.md)
-
-### Mac install steps
-
-#### Fetch the latest version of the emsdk (not needed the first time you clone)
-
-git pull
-
-##### Download and install the latest SDK tools
-
-./emsdk install latest
-
-##### Make the "latest" SDK "active" for the current user. (writes .emscripten file)
-
-./emsdk activate latest
-
-#### Activate PATH and other environment variables in the current terminal
-
-source ./emsdk_env.sh
+There are lots of tools out there that can create .wasm  module and the JavaScript glue. In this case we'll focus on Emscription, which uses Clang + LLVM to create .wasm module.
 
 ## Setting up test web server
 
@@ -57,3 +31,7 @@ Python http.server is a good low-profile solution for this.
 For Python 3+ the command is:
 
 `python3 -m http.server`
+
+## Use cases
+
+<https://webassembly.org/docs/use-cases/>
