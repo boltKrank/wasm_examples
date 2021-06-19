@@ -22,6 +22,24 @@ Emscripten can convert any language that uses LLVM into WebAssembly. Other langu
 
 <https://emscripten.org/docs/getting_started/downloads.html>
 
-## Usage examples:
+## Usage examples
 
 - [C++ Hello World!](cpp_hello_world/cpp_hello_world.md)
+
+### Mac install steps
+
+#### Fetch the latest version of the emsdk (not needed the first time you clone)
+
+git pull
+
+##### Download and install the latest SDK tools
+
+./emsdk install latest
+
+##### Make the "latest" SDK "active" for the current user. (writes .emscripten file)
+
+./emsdk activate latest
+
+#### Activate PATH and other environment variables in the current terminal
+
+source ./emsdk_env.sh
