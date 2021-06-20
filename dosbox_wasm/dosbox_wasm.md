@@ -11,3 +11,10 @@
 1. Not started
 2. Not started
 3. Not started
+
+## Appendix
+
+Found an old implementation (4 years ago): https://github.com/boltKrank/em-dosbox
+
+Original author dreamlayers/em-dosbox. Will work off the fork as Emscripten has changed a lot since.
+
