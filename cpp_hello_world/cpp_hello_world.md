@@ -27,3 +27,5 @@ NOTE this has to be run in the same directory as the hello2.c and html_template/
 TODO: remove all extra HTML padding so that the output is a simple HTML with just connections to the .wasm module
 
 Minimal command: `emcc -o hello3.html hello.c -O3 -s WASM=1 --shell-file html_template/shell_minimal_mk2.html`
+
+The file specified by --shell-file must have the {{{ SCRIPT }}} tag in it, and the file after -o must be a .html file.
