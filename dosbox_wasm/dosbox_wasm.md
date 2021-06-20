@@ -14,7 +14,7 @@
 
 ## Appendix
 
-Found an old implementation (4 years ago): https://github.com/boltKrank/em-dosbox
+Found an old implementation (4 years ago): <https://github.com/boltKrank/em-dosbox>
 
 Original author dreamlayers/em-dosbox. Will work off the fork as Emscripten has changed a lot since.
 

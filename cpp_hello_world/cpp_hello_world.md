@@ -28,4 +28,6 @@ TODO: remove all extra HTML padding so that the output is a simple HTML with jus
 
 Minimal command: `emcc -o hello3.html hello.c -O3 -s WASM=1 --shell-file html_template/shell_minimal_mk2.html`
 
-The file specified by --shell-file must have the {{{ SCRIPT }}} tag in it, and the file after -o must be a .html file.
+The file specified by --shell-file must have the {{{ SCRIPT }}} tag in it, and the file after -o must be a .html file. This {{{ SCRIPT }}} tag is replaced by a link to the JS file.
+
+NOTE: Due to limitations of Windows - I'll use Ubuntu 18.04 WSL for compilation and testing.
